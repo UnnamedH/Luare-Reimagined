@@ -1,0 +1,73 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta property="og:title" content="DaL Online!" />
+    <meta property="og:url" content="https://tictactoehrant.herokuapp.com" />
+    <meta property="og:site_name" content="DaL" />
+    <meta property="og:description" content="DaL online made by hrant" />
+    <title>Multiplayer DaL</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      #gameScreen {
+        display: none;
+        /* display: block; */
+      }
+      #endScreen {
+        display: none;
+        /* display: block; */
+      }
+      #welcomeScreen {
+        display: flex;
+        /* display: none; */
+      }
+    </style>
+  </head>
+  <body id="overview">
+    <div id="welcomeScreen">
+      <h1 id="welcomeText">Welcome to Multiplayer DaL!</h1>
+      <button type="submit" class="menuBtn" id="createGameBtn" onclick="menuClicked(id)">Create Game</button>
+      <div>OR</div>
+      <div>
+        <input type="text" class="menuBtn" placeholder="Enter Game Code Here" id="codeInput" />
+        <button type="submit" class="menuBtn" id="joinGameBtn" onclick="menuClicked(id)">Join Game</button>
+      </div>
+      <pre></pre>
+      <div id="connectionDiv">Disconnected</div>
+      <div id="waitDiv">(Might have to wait a few seconds for the server to boot up)</div>
+    </div>
+    <div id="gameScreen">
+      <div id="motherDiv">
+        <div class="playerDiv divs">
+          <h1 id="pTurnText" class="text" style="color: red">P1</h1>
+        </div>
+        <div id="youAreDiv">
+          You are Player 1 (Red)
+        </div>
+        <div class="emptyDiv">
+          <!-- <button id="399" onclick="clicked(id)"> winner</button> -->
+        </div>
+        <div class="scoreDiv divs">
+          <h3 id="p1scoreText" class="text" style="color: red">P1:0</h3>
+          <h3 id="p2scoreText" class="text" style="color: blue">P2:0</hh3>
+        </div>
+      </div>
+      <div id="gameDiv">
+      </div>
+      <div id="codeText">The Code is: </div>
+    </div>
+    <div id="endScreen">
+      <h1 id="winnerText">Game Over!</h1>
+      <h3 id="scoresText">P1:H<br>P2:H</h3>
+      <div>
+        <button class="menuBtn endBtn" id="playAgainBtn" onclick="menuClicked(id)">Play Again</button>
+        <button class="menuBtn endBtn" id="leaveRoomBtn" onclick="menuClicked(id)">Leave Room</button>
+      </div>
+    </div>
+    <script src="node_modules\alertifyjs\build\alertify.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="node_modules\alertifyjs\build\css\alertify.css" />
+    <link rel="stylesheet" href="node_modules\alertifyjs\build\css\themes\default.css" />
+    <script src="script.js"></script>
+  </body>
+  <footer>By: TheH</footer>
+</html>

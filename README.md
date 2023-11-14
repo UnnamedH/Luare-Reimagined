@@ -1,7 +1,7 @@
 # Luare-Reimagined
 Make squares with lines to win! 
 
-[luare.herokuapp.com](https://luare.herokuapp.com)
+[luare.onrender.com](https://luare.onrender.com/)
 
 A game of multiplayer Lines and Squares (an update to the old DaL)
 
